@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body *,
+html * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Nunito";
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.login_img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+}
+
+.zoom_eff {
+  animation: scale 40s linear infinite;
+}
+
+.shadow_eff {
+  filter: drop-shadow(5px 60px 35px rgba(0, 0, 0, 0.8));
+}
+
+@keyframes scale {
+  50% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+.dashboard-bg {
+  background: rgb(78, 105, 133);
+  background: linear-gradient(
+    333deg,
+    rgba(78, 105, 133, 1) 0%,
+    rgba(30, 38, 48, 1) 100%
+  );
+}
+.sidebar-bg {
+  background: rgb(32, 75, 119);
+  background: linear-gradient(
+    333deg,
+    rgba(32, 75, 119, 1) 0%,
+    rgba(30, 38, 48, 1) 100%
+  );
+}
+.bg-card {
+  background-color: #1e2742;
+  color: #767b88;
+}
+.bg-sidebar-card-top {
+  background-color: #353535;
+}
+.sidebar-separator-top {
+  border-bottom: 1px solid #686e80;
+}
+.sidebar-separator-bottom {
+  border-top: 1px solid #686e80;
+}
+.text-premium-yellow {
+  color: #f7b91c;
+}
+.icon-background {
+  background: #2d2d2d;
+}
+
+.tooltip-head {
+  background: #1d1d1d;
+}
+.tooltip-body {
+  background: #252525;
+}
+
+.search-icon {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.card-stack-border {
+  border-bottom: 2px solid #696969;
+}
+.bg-details {
+  background-color: #1e1e1e;
+}
+
+.add-component-head {
+  background-color: #181818;
+  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+}
+
+.sidebar-item-selected {
+  color: #4f45b1;
+  border-right: 2px solid white;
+}
+.sidebar-item {
+  border-right: 2px solid transparent;
+  color: #ececef;
+}
+.sidebar-item:hover {
+  color: #a1a0a0;
+}
+
+/* user profile */
+
+.profile-pic {
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  vertical-align: middle;
+  text-align: center;
+  color: transparent;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profile-pic:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  color: #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Reset Password */
+
+.row {
+  background-color: #2d3b4b;
+  color: #fff;
+  text-align: center;
+  padding: 2em 2em 0.5em;
+  width: 90%;
+  border-radius: 5px;
+}
+.row h1 {
+  font-size: 2.5em;
+}
+.row .form-group {
+  margin: 0.5em 0;
+}
+.row .form-group label {
+  display: block;
+  color: #fff;
+  text-align: left;
+  font-weight: 600;
+}
+.row .form-group input,
+.row .form-group button {
+  display: block;
+  padding: 0.5em 0;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid #555;
+  color: #eee;
+}
+.row .form-group input:focus,
+.row .form-group button:focus {
+  background-color: #232f56;
+  color: #fff;
+  border: none;
+  padding: 1em 0.5em;
+  animation: pulse 1s infinite ease;
+}
+.row .form-group button {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  outline: none;
+  -moz-user-select: none;
+  user-select: none;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 2em;
+  padding: 1em;
+}
+.row .form-group button:hover,
+.row .form-group button:focus {
+  background-color: #fff;
+  color: #333;
+}
+.row .form-group button.is-loading::after {
+  animation: spinner 500ms infinite linear;
+  content: "";
+  position: absolute;
+  margin-left: 2em;
+  border: 2px solid #000;
+  border-radius: 100%;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  height: 1em;
+  width: 4%;
+}
+.row .footer h5 {
+  margin-top: 1em;
+}
+.row .footer p {
+  margin-top: 2em;
+}
+.row .footer p .symbols {
+  color: #444;
+}
+.row .footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.information-text {
+  color: #ddd;
+}
+
+@media screen and (max-width: 320px) {
+  .row {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .row h1 {
+    font-size: 1.5em !important;
+  }
+}
+@media screen and (min-width: 900px) {
+  .row {
+    width: 50%;
+  }
+}
