@@ -1,1 +1,1 @@
-# trading-accelerator
+# trading app
